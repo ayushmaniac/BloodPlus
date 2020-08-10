@@ -1,0 +1,63 @@
+<resources>
+    <string name="app_name">Surajpur Blood+</string>
+    <string name="openDrawer">Open Drawer</string>
+    <string name="closeDrawer">Close Drawer</string>
+    <string-array name="drop_city">
+        <item>Surajpur</item>
+        <item>Bishrampur</item>
+        <item>Prem Nagar</item>
+        <item>Bhaiyathan</item>
+        <item>Odgi</item>
+        <item>Ramanuj Nagar</item>
+        <item>Bhatgaon</item>
+        <item>Pratappur</item>
+    </string-array>
+    <string-array name="drop_request">
+        <item>Suggestion</item>
+        <item>Query</item>
+        <item>Help</item>
+        <item>Other</item>
+    </string-array>
+    <string name="about1">\tSurajpur Blood+ acts as an important role in saving life of human beings.</string>
+    <string name="about2">\tThis app is developed by Social Ninja with only purpose of social welfare. Social Ninja is not going to generate revenue from this app. </string>
+    <string name="about3">\tSurajpur Blood+ have variety of features :-</string>
+    <string name="about4">\t\t* User can register in app</string>
+    <string name="about5">\t\t* user can request for blood</string>
+    <string name="about6">\t\t* user can donate blood</string>
+    <string name="about7">\t\t* user can view the blood compatibility</string>
+    <string name="about8">\t\t* user can also take a look over the nearest hospital</string>
+    <string name="about9">\tThe app is developed by Social Ninja so that users can view the information about registered blood donors such as name, address, and other such personal information along with their details of blood group and other medical information of donor. The project also has a login page where in the user is required to register and only then can view the availability of blood and may also register to donate blood if he/she wishes to. This app requires internet access and thus there is a disadvantage of internet failure. Thus this application helps to select the right donor online instantly using medical details along with the blood group. </string>
+    <string name="about0">\tThe main aim of developing this application by Social Ninja is to reduce the time to a great extent that is spent in searching for the right donor and the availability of blood required. This application provides the required information in no time and also helps in quicker decision making.</string>
+    <string name="toshead">Terms &amp; Conditions :</string>
+
+    <string name="tos1">1. Surajpur Blood+ is developed by Mr. Rakesh Sahu with Team Social Ninja.</string>
+    <string name="tos2">2. All rights related to the app were reserved to Social Ninja.</string>
+    <string name="tos3">3. We are providing complete database about blood information.</string>
+    <string name="tos4">4. We are not responsible for recognizing or verifying the donor and any other facilities.</string>
+    <string name="tos5">5. Surajpur Blood+ is solely the property of Social Ninja, you cannot use and publish any content of the application without permission.</string>
+    <string name="tos6">6. Before taking blood from any donor listed on the application, please verify on your own whether the donor is eligible for giving blood(health) and is not suffering from any blood related disease.</string>
+    <string name="tos7">7. We have developed this app with our full and genuine efforts, if something is not working or is inadequate, then we kindly apologize to you for such issues.</string>
+
+    <string name="tos8">DO donate blood, only if you satisfy all of the following conditions:</string>
+
+    <string name="tos9">- You are between age group of 18-60 years.</string>
+    <string name="tos10">- Your weight is 45 kgs or more.</string>
+    <string name="tos11">- Your hemoglobin is 12.5 gm% minimum.</string>
+    <string name="tos12">- Your last blood donation was 3 or more months earlier.</string>
+    <string name="tos13">- You are healthy and have not suffered from malaria, typhoid or other transmissible disease in the recent past.</string>
+
+
+    <string name="tos14">DO NOT donate blood, if you have any of the following conditions:</string>
+
+    <string name="tos15">- Cold / fever in the past 1 week.</string>
+    <string name="tos16">- Under treatment with antibiotics or any other medication.</string>
+    <string name="tos17">- Cardiac problems, hypertension, epilepsy, diabetes (on insulin therapy), history of cancer, chronic - kidney or liver disease, bleeding tendencies, venereal disease etc.</string>
+    <string name="tos18">- Major surgery in the last 6 months.</string>
+    <string name="tos19">- Vaccination in the last 24 hours.</string>
+    <string name="tos20">- Had a miscarriage in the last 6 months or have been pregnant / lactating in the last one year.</string>
+    <string name="tos21">- Had fainting attacks during last donation.</string>
+    <string name="tos22">- Have regularly received treatment with blood products.</string>
+    <string name="tos23">- Shared a needle to inject drugs/ have history of drug addiction.</string>
+    <string name="tos24">- Had sexual relations with different partners or with a high risk individual.</string>
+    <string name="tos25">- Been tested positive for antibodies to HIV.</string>
+</resources>
