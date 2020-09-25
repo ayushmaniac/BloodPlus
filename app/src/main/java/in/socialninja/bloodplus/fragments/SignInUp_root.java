@@ -10,10 +10,6 @@ import androidx.fragment.app.FragmentTransaction;
 
 import in.socialninja.bloodplus.R;
 
-/**
- * Created by Unique on 06-03-2018.
- */
-
 public class SignInUp_root extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

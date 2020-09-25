@@ -110,6 +110,7 @@ public class SearchContactResult extends Fragment {
 
     public void getSearchContact(String city, String blood) {
         //Toast.makeText(getContext(), city+"   "+blood, Toast.LENGTH_SHORT).show();
+
         RequestParams params = new RequestParams();
         params.put("bu_city", city);
         params.put("bu_b_group", blood);
@@ -136,19 +137,31 @@ public class SearchContactResult extends Fragment {
 //id, name,city,dob,gender,contact,emailaddress,problem,bloodgroup,lastdonatedate
                             //Toast.makeText(getContext(),bloodgr,Toast.LENGTH_LONG).show();
                             SearchContactModal nav = new SearchContactModal(bu_id, bu_name, bu_city, bu_dob, bu_gender, bu_contact, bu_email, bu_m_problem, bloodgr, bu_d_date);
+                            //Toast.makeText(getContext(),""+list_contact,Toast.LENGTH_LONG).show();
                             list_contact.add(nav);
+
                         }
-                        scmodal = list_contact.toArray(new SearchContactModal[list_contact.size()]);
-                        SearchContactAdapter scm = new SearchContactAdapter(getActivity(), getContext(), scmodal);
-                        contactlist.setLayoutManager(new LinearLayoutManager(getActivity()));
-                        contactlist.setAdapter(scm);
+                        if (list_contact == null && !list_contact.isEmpty()) {
+                            OppsFragment frag = new OppsFragment();
+                            transact(frag);
+                        } else {
+                            scmodal = list_contact.toArray(new SearchContactModal[list_contact.size()]);
+                            //Toast.makeText(getContext(), "" + scmodal, Toast.LENGTH_LONG).show();
+                            SearchContactAdapter scm = new SearchContactAdapter(getActivity(), getContext(), scmodal);
+                            contactlist.setLayoutManager(new LinearLayoutManager(getActivity()));
+                            //Toast.makeText(getContext(), "" + scm, Toast.LENGTH_LONG).show();
+
+                            contactlist.setAdapter(scm);
+                        }
                     } catch (Exception e) {
+
                         e.printStackTrace();
                     }
                 }
 
                 public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
                     super.onFailure(statusCode, headers, responseString, throwable);
+
                     if (statusCode <= 400) {
                         Toast.makeText(getContext(), "Bad Request or Server not available", Toast.LENGTH_SHORT).show();
                     } else {
@@ -159,5 +172,6 @@ public class SearchContactResult extends Fragment {
         } else {
             Toast.makeText(getContext(), "Please check your connection", Toast.LENGTH_SHORT).show();
         }
+
     }
 }

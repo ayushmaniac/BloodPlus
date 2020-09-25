@@ -33,6 +33,8 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.navigation.NavigationView;
 
+import java.net.InetAddress;
+
 import in.socialninja.bloodplus.adapters.FrontFragmentAdapter;
 import in.socialninja.bloodplus.adapters.NavigationAdapter;
 import in.socialninja.bloodplus.fragments.AboutUs;
@@ -289,6 +291,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             } else {
 
             }
+        }
+    }
+
+    public boolean isInternetAvailable() {
+        try {
+            InetAddress ipAddr = InetAddress.getByName("google.com");
+            //You can replace it with your name
+            return !ipAddr.equals("");
+
+        } catch (Exception e) {
+            return false;
         }
     }
 }

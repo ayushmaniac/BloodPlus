@@ -10,10 +10,7 @@
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_menu_black_24dp"
             android:title="Rate Us" />
-        <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_black_24dp"
-            android:title="Donation" />
+
         <item
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_menu_black_24dp"
