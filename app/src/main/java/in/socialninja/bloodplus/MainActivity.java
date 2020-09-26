@@ -35,15 +35,22 @@ import com.google.android.material.navigation.NavigationView;
 
 import java.net.InetAddress;
 
+import in.socialninja.bloodplus.activity.CompleteProfileActivity;
 import in.socialninja.bloodplus.adapters.FrontFragmentAdapter;
 import in.socialninja.bloodplus.adapters.NavigationAdapter;
+import in.socialninja.bloodplus.data.UserCompletion;
 import in.socialninja.bloodplus.fragments.AboutUs;
 import in.socialninja.bloodplus.fragments.ContactUs;
 import in.socialninja.bloodplus.fragments.ProfileActivity;
 import in.socialninja.bloodplus.fragments.Termsofuse;
 import in.socialninja.bloodplus.httphandler.SHPref;
+import in.socialninja.bloodplus.network.NetworkServices;
+import in.socialninja.bloodplus.network.ServiceBuilder;
 import nl.psdcompany.duonavigationdrawer.views.DuoDrawerLayout;
 import nl.psdcompany.duonavigationdrawer.widgets.DuoDrawerToggle;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -63,6 +70,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setupWindowAnimations();
+        checkProfileCompletion();
         //drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         // navigationView = (NavigationView) findViewById(R.id.nav_view1);
 
@@ -157,6 +165,34 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         ViewPager pager = (ViewPager) findViewById(R.id.container);
         FrontFragmentAdapter ffa = new FrontFragmentAdapter(getSupportFragmentManager(), 1);
         pager.setAdapter(ffa);
+    }
+
+    private void checkProfileCompletion() {
+        final NetworkServices request = ServiceBuilder.INSTANCE.buildService(NetworkServices.class);
+        Call<UserCompletion> call = request.getUserCompletion(SHPref.getDefaults("password", getApplicationContext()));
+        call.enqueue(new Callback<UserCompletion>() {
+            @Override
+            public void onResponse(Call<UserCompletion> call, Response<UserCompletion> response) {
+                if (response.isSuccessful()) {
+                    if (response.body() != null) {
+                        if (response.body().isUserCompleted()) {
+                            showCompleteUserProfileActivity();
+                        }
+                    }
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<UserCompletion> call, Throwable t) {
+
+            }
+        });
+    }
+
+    private void showCompleteUserProfileActivity() {
+        Intent intent = new Intent(MainActivity.this, CompleteProfileActivity.class);
+        startActivity(intent);
     }
 
    /* @Override

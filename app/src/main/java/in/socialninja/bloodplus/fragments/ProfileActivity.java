@@ -20,6 +20,7 @@ import in.socialninja.bloodplus.httphandler.SHPref;
  */
 
 public class ProfileActivity extends AppCompatActivity {
+
     //View mview;
     String bloodgroup;
 
